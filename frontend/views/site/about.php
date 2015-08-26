@@ -7,15 +7,6 @@ use yii\helpers\Html;
 $this->title = 'About';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<?php
-Yii::$app->mailer->compose()
-    ->setFrom('from@domain.com')
-    ->setTo('to@domain.com')
-    ->setSubject('Message subject')
-    ->setTextBody('Plain text content')
-    ->setHtmlBody('<b>HTML content</b>')
-    ->send();
-?>
 <div class="site-about">
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -23,7 +14,3 @@ Yii::$app->mailer->compose()
 
     <code><?= __FILE__ ?></code>
 </div>
-
-<script>
-    aler("ciao");
-</script>
